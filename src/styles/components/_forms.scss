@@ -18,3 +18,9 @@
         display: inline-block;
     }
 }
+
+.form-error-message {
+    @extend .mt-1;
+    color: var(--color-error);
+    font-size: 1.4rem;
+}

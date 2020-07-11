@@ -4,27 +4,57 @@
         <div class="form-group">
             <label class="form-label">First Name:</label>
             <input type="text" placeholder="Your First Name" formControlName="firstName" class="form-control" />
+            <app-form-error [control]="registrationForm.get('firstName')" validatorName="required">
+                First Name is required.
+            </app-form-error>
         </div>
         <div class="form-group">
             <label class="form-label">Last Name:</label>
             <input type="text" placeholder="Your Last Name" formControlName="lastName" class="form-control" />
+            <app-form-error [control]="registrationForm.get('lastName')" validatorName="required">
+                Last Name is required.
+            </app-form-error>
         </div>
         <div class="form-group">
             <label class="form-label">User Name:</label>
             <input type="text" placeholder="Your Username" formControlName="userName" class="form-control" />
+            <app-form-error [control]="registrationForm.get('userName')" validatorName="required">
+                Username is required.
+            </app-form-error>
         </div>
         <div class="form-group">
             <label class="form-label">Email:</label>
             <input type="email" placeholder="Your email" formControlName="email" class="form-control" />
+            <app-form-error [control]="registrationForm.get('email')" validatorName="required">
+                Email is required.
+            </app-form-error>
+            <app-form-error [control]="registrationForm.get('userName')" validatorName="email">
+                Invalid Email.
+            </app-form-error>
         </div>
         <div class="form-group">
             <label class="form-label">Password:</label>
             <input type="password" placeholder="Password" formControlName="password" class="form-control" />
+
+            <app-form-error [control]="registrationForm.get('password')" validatorName="required">
+                Password is required.
+            </app-form-error>
+            <app-form-error [control]="registrationForm.get('password')" validatorName="pattern">
+                Password must have a number and a uppercase character with minimum 8 characters long.
+            </app-form-error>
         </div>
         <div class="form-group">
             <label class="form-label">Confirm Passowrd:</label>
             <input type="password" placeholder="Confirm Password" formControlName="confirmPassword"
                 class="form-control" />
+            <app-form-error [group]="registrationForm" controlName="confirmPassword"
+                validatorName="confirmPassword">
+                Password and Confirm Password didn't match.
+            </app-form-error>
+            <app-form-error [control]="registrationForm.get('confirmPassword')" validatorName="required">
+                Confirm Password is required
+            </app-form-error>
+
         </div>
 
         <div class="form-btn">

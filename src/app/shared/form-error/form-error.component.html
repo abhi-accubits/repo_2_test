@@ -1,0 +1,13 @@
+<ng-container *ngIf="group">
+        <div *ngIf="group.errors && group.errors[validatorName] && (
+                group.get(controlName).touched || group.get(controlName).dirty)" class="form-error-message">
+                <ng-content></ng-content>
+        </div>
+</ng-container>
+
+<ng-container *ngIf="!group">
+        <div *ngIf="control.errors && control.errors[validatorName] && (
+                control.touched || control.dirty)" class="form-error-message">
+                <ng-content></ng-content>
+        </div>
+</ng-container>

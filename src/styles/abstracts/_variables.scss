@@ -5,7 +5,8 @@ $theme-map-light: (
     --color-dark: #000,
     --color-light: #fff,
     --color-border: #dedede,
-    --color-btn-text: #fff
+    --color-btn-text: #fff,
+    --color-error: #ff0000
 );
 
 $theme-map-dark: (
@@ -15,7 +16,8 @@ $theme-map-dark: (
     --color-dark: #000,
     --color-light: #fff,
     --color-border: #dedede,
-    --color-btn-text: #fff
+    --color-btn-text: #fff,
+    --color-error: #ff0000
 );
 
 $paddings: 4px, 10px, 12px, 16px, 20px;
