@@ -1,0 +1,33 @@
+
+/*
+    Used to create CSS properties and values based on a SCSS map.
+*/
+@mixin spread-map($map: ()) {
+    @each $key, $value in $map {
+        #{$key}: $value;
+    }
+}
+
+@mixin create-spacing-utils($list: (), $classPrefix) {
+    @for $i from 1 through length($list) {
+        .#{$classPrefix}-#{$i} {
+            padding: nth($list,$i);
+        }
+
+        .#{$classPrefix}l-#{$i} {
+            padding-left: nth($list, $i);
+        }
+
+        .#{$classPrefix}r-#{$i} {
+            padding-right: nth($list, $i);
+        }
+
+        .#{$classPrefix}t-#{$i} {
+            padding-top: nth($list, $i);
+        }
+
+        .#{$classPrefix}b-#{$i} {
+            padding-bottom: nth($list, $i);
+        }
+    }
+}

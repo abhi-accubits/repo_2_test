@@ -1,0 +1,34 @@
+<section class="registration p-5">
+    <h1>Registration</h1>
+    <form [formGroup]="registrationForm">
+        <div class="form-group">
+            <label class="form-label">First Name:</label>
+            <input type="text" placeholder="Your First Name" formControlName="firstName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="form-label">Last Name:</label>
+            <input type="text" placeholder="Your Last Name" formControlName="lastName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="form-label">User Name:</label>
+            <input type="text" placeholder="Your Username" formControlName="userName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="form-label">Email:</label>
+            <input type="email" placeholder="Your email" formControlName="email" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="form-label">Password:</label>
+            <input type="password" placeholder="Password" formControlName="password" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="form-label">Confirm Passowrd:</label>
+            <input type="password" placeholder="Confirm Password" formControlName="confirmPassword"
+                class="form-control" />
+        </div>
+
+        <div class="form-btn">
+            <button class="btn btn-primary">Register</button>
+        </div>
+    </form>
+</section>

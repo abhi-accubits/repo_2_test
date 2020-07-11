@@ -1,0 +1,20 @@
+.form-group {
+    @extend .mb-3;
+}
+
+.form-label {
+    @extend .mb-1;
+    display: block;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--color-border);
+    border-radius: .6rem;
+    padding: .8rem .75rem;
+
+    &--inline {
+        display: inline-block;
+    }
+}

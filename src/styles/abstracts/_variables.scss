@@ -1,0 +1,22 @@
+$theme-map-light: (
+    --color-primary: #e41032,
+    --color-secondary: #f2f2f2,
+    --color-background: #fafafa,
+    --color-dark: #000,
+    --color-light: #fff,
+    --color-border: #dedede,
+    --color-btn-text: #fff
+);
+
+$theme-map-dark: (
+    --color-primary: #f34c84,
+    --color-secondary: #c297dc,
+    --color-background: #1b1919,
+    --color-dark: #000,
+    --color-light: #fff,
+    --color-border: #dedede,
+    --color-btn-text: #fff
+);
+
+$paddings: 4px, 10px, 12px, 16px, 20px;
+$margins: 4px, 10px, 12px, 16px, 20px;
