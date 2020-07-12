@@ -1,1 +1,30 @@
-<p>login works!</p>
+<section class="login p-5">
+    <h1>Login</h1>
+    <form [formGroup]="loginForm">
+
+        <div class="form-group">
+            <label class="form-label">User Name:</label>
+            <input type="text" placeholder="Your Username" formControlName="userName" class="form-control" />
+            <app-form-error [control]="loginForm.get('userName')" validatorName="required">
+                Username is required.
+            </app-form-error>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Password:</label>
+            <input type="password" placeholder="Password" formControlName="password" class="form-control" />
+
+            <app-form-error [control]="loginForm.get('password')" validatorName="required">
+                Password is required.
+            </app-form-error>
+            <app-form-error [control]="loginForm.get('password')" validatorName="pattern">
+                Password must have a number and a uppercase character with minimum 8 characters long.
+            </app-form-error>
+        </div>
+
+        <div class="form-btn">
+            <button [disabled]="loginForm.invalid" class="btn btn-primary">Login</button>
+        </div>
+        <a routerLink="/">Already a member?</a>
+
+    </form>
+</section>
