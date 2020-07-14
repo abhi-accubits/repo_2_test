@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthenticationService } from '@app/core/services';
 import { LoginParams, LoginResponse } from '@app/core/interfaces';
+import { Observable } from 'rxjs';
 
 /**
  * @description Login Form Component
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   /**
-   * @description To create login form modal.
+   * To create login form modal.
    */
   createLoginForm(): void {
     this.loginForm = this.fb.group({
@@ -31,7 +32,7 @@ export class LoginComponent implements OnInit {
   }
 
   /**
-   * @description Trigger login method of authentication service with params from the form.
+   * Trigger login method of authentication service with params from the form.
    */
   login() {
     const loginParams: LoginParams = {...this.loginForm.value};

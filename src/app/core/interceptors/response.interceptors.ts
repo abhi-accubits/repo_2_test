@@ -42,7 +42,7 @@ export class ResponseInterceptor implements HttpInterceptor {
      * @description To refresh the token with new one if we have that on response header.
      */
     authCheck(resp) {
-        const token = this.auth.getToken();
+        const token = this.auth.token;
         const responseTokenHeaderName = 'X-NEW-TOKEN'; // Change it based on your API response.
         let newToken = token;
 
@@ -55,7 +55,7 @@ export class ResponseInterceptor implements HttpInterceptor {
         }
 
         if (token !== newToken) {
-            this.auth.refreshToken(newToken);
+            this.auth.token = newToken;
         }
     }
 }

@@ -23,7 +23,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   /**
-   * @description Creates Reactive form modal for the registration form.
+   * Creates Reactive form modal for the registration form.
    */
   createForm(): void {
     this.registrationForm = this.fb.group({
@@ -40,7 +40,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   /**
-   * @description Trigger register method of authentication service with params from the form.
+   * Trigger register method of authentication service with params from the form.
    */
   register(): void {
     const registerParams: RegisterParams = { ...this.registrationForm.value };

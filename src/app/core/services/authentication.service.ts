@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { LoginParams, RegisterParams } from '@core/interfaces';
 import { HttpClient } from '@angular/common/http';
 import { Config } from '@app/config/config';
+import { environment } from '@env/environment';
 
 /**
  * @description Authentication Service which handles the user session and authentication related API
@@ -44,7 +45,8 @@ export class AuthenticationService {
    * @description Login to the application, triggers login API.
    */
   login(loginParams: LoginParams) {
-    return this.http.post('/login', loginParams);
+    
+    return this.http.post(`${environment.api_url}/login`, loginParams);
   }
 
   /**
@@ -52,6 +54,6 @@ export class AuthenticationService {
    * @description Register/Signup to the application, triggers register API.
    */
   register(registerParams: RegisterParams) {
-    return this.http.post('/register', registerParams);
+    return this.http.post(`${environment.api_url}/register`, registerParams);
   }
 }

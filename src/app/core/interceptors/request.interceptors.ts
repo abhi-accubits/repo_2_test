@@ -31,7 +31,7 @@ export class RequestInterceptor implements HttpInterceptor {
         }
 
         if (this.auth.isSessionActive()) {
-            headers['Authorization'] = 'Bearer ' + this.auth.getToken();
+            headers['Authorization'] = 'Bearer ' + this.auth.token;
         }
 
         const request = req.clone({
