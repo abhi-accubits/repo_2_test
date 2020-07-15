@@ -1,29 +1,6 @@
-/*
-    Generate Padding utility classes: p1, p2, p3, p4, p5
-    You can also select specific sides like pt-1 (top), pb-2 (bottom), pr-3 (right), pl-4 (left)
-*/
-@include create-spacing-utils($paddings, 'p');
-
-/*
-    Generate Margin utility classes: m1, m2, m3, m4, m5
-    You can also select specific sides like mt-1 (top), mb-2 (bottom), mr-3 (right), ml-4 (left)
-*/
-@include create-spacing-utils($margins, 'm');
-
-
-/* Text Alignment Utils */
-.text-right {
-    text-align: right;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-jusity {
-    text-align: justify;
-}
+@import 'utils/display.scss';
+@import 'utils/flex';
+@import 'utils/position';
+@import 'utils/sizing';
+@import 'utils/spacing';
+@import 'utils/text';
